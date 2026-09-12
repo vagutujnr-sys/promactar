@@ -1,0 +1,6 @@
+- [x] Reduce the home hero height and headline size.
+- [x] Replace the header/footer logo with the new wordmark and remove accompanying header text.
+- [x] Use uploaded authentic ProMactar project photography across road construction and gallery pages.
+- [x] Add rounded pill highlighting to the active navigation item.
+- [x] Increase card border rounding consistently across the site.
+- [x] Verify all pages, links, desktop and mobile layouts.
