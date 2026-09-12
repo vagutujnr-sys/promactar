@@ -27,6 +27,7 @@ export const Route = createFileRoute("/gallery")({
         content: "A selection of our construction and surface-development works.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/gallery" }],
   }),
   component: Gallery,
 });

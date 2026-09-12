@@ -17,6 +17,7 @@ export const Route = createFileRoute("/contact")({
         content: "KG Centre, Van Riebeeck Avenue, Alberton 1450, Gauteng ZA.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/contact" }],
   }),
   component: Contact,
 });

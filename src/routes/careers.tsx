@@ -17,6 +17,7 @@ export const Route = createFileRoute("/careers")({
         content: "Join Pro Mactar — construction and surface-development work across Gauteng.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/careers" }],
   }),
   component: Careers,
 });

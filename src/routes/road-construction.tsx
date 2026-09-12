@@ -20,6 +20,7 @@ export const Route = createFileRoute("/road-construction")({
         content: "Building the roads that move people, business and communities.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/road-construction" }],
   }),
   component: Roads,
 });

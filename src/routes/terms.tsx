@@ -16,6 +16,7 @@ export const Route = createFileRoute("/terms")({
         content: "Terms governing website use and project enquiries with Pro Mactar.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/terms" }],
   }),
   component: Terms,
 });

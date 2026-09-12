@@ -17,6 +17,7 @@ export const Route = createFileRoute("/site-visit")({
         content: "Book a site assessment for your construction or surface-development project.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/site-visit" }],
   }),
   component: SiteVisit,
 });

@@ -18,6 +18,7 @@ export const Route = createFileRoute("/about")({
         content: "Our background, mission, vision and operational approach to construction.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/about" }],
   }),
   component: About,
 });

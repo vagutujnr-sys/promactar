@@ -23,6 +23,7 @@ export const Route = createFileRoute("/services")({
           "Construction and surface-development services for residential, commercial, industrial and infrastructure clients.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/services" }],
   }),
   component: Services,
 });

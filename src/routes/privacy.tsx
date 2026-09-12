@@ -16,6 +16,7 @@ export const Route = createFileRoute("/privacy")({
         content: "Pro Mactar privacy policy for website visitors and project enquiries.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://www.promactar.co.za/privacy" }],
   }),
   component: Privacy,
 });
