@@ -4,7 +4,7 @@ import logo from "@/assets/promactar-logo.png";
 
 export function SiteFooter() {
   return (
-    <footer className="surface-dark mt-24">
+    <footer className="surface-dark">
       <div className="hazard-stripe h-1" />
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3">
         <div>
@@ -79,7 +79,10 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-asphalt-foreground/50">
-        © {new Date().getFullYear()} Pro Mactar Civil Construction (Pty) Ltd. All rights reserved.
+        <div>© {new Date().getFullYear()} Pro Mactar Civil Construction (Pty) Ltd. All rights reserved.</div>
+        <div className="mt-2 uppercase tracking-[0.2em] text-asphalt-foreground/40">
+          Developed by CodemathPHP
+        </div>
       </div>
     </footer>
   );
