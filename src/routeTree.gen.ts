@@ -18,6 +18,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RoadConstructionRouteImport } from './routes/road-construction'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SiteVisitRouteImport } from './routes/site-visit'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as TermsRouteImport } from './routes/terms'
 
 const IndexRoute = IndexRouteImport.update({
@@ -65,6 +66,11 @@ const SiteVisitRoute = SiteVisitRouteImport.update({
   path: '/site-visit',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/road-construction': typeof RoadConstructionRoute
   '/services': typeof ServicesRoute
   '/site-visit': typeof SiteVisitRoute
+  '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/road-construction': typeof RoadConstructionRoute
   '/services': typeof ServicesRoute
   '/site-visit': typeof SiteVisitRoute
+  '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/road-construction': typeof RoadConstructionRoute
   '/services': typeof ServicesRoute
   '/site-visit': typeof SiteVisitRoute
+  '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/road-construction'
     | '/services'
     | '/site-visit'
+    | '/sitemap'
     | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/road-construction'
     | '/services'
     | '/site-visit'
+    | '/sitemap'
     | '/terms'
   id:
     | '__root__'
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/road-construction'
     | '/services'
     | '/site-visit'
+    | '/sitemap'
     | '/terms'
   fileRoutesById: FileRoutesById
 }
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   RoadConstructionRoute: typeof RoadConstructionRoute
   ServicesRoute: typeof ServicesRoute
   SiteVisitRoute: typeof SiteVisitRoute
+  SitemapRoute: typeof SitemapRoute
   TermsRoute: typeof TermsRoute
 }
 
@@ -225,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteVisitRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   RoadConstructionRoute: RoadConstructionRoute,
   ServicesRoute: ServicesRoute,
   SiteVisitRoute: SiteVisitRoute,
+  SitemapRoute: SitemapRoute,
   TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport

@@ -33,6 +33,7 @@ export function SiteFooter() {
               { to: "/road-construction", label: "Asphalt & Road Construction" },
               { to: "/gallery", label: "Project Gallery" },
               { to: "/contact", label: "Get In Touch" },
+              { to: "/sitemap", label: "Sitemap" },
             ].map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="transition-colors hover:text-primary">
