@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone, Mail, HardHat, Truck, TrafficCone, PencilRuler } from "lucide-react";
 import logo from "@/assets/promactar-logo.png";
+import { QuoteDialog } from "@/components/QuoteDialog";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -28,6 +29,7 @@ const tradeIcons = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50">
@@ -62,12 +64,13 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <button
+              type="button"
+              onClick={() => setQuoteOpen(true)}
               className="rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-105"
             >
               Get a Quote
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -141,6 +144,16 @@ export function SiteHeader() {
                 </Link>
               ))}
             </div>
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                setQuoteOpen(true);
+              }}
+              className="mt-3 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-bold uppercase tracking-wide text-primary-foreground"
+            >
+              Get a Quote
+            </button>
             <a
               href="tel:+27742878233"
               className="mt-4 inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-bold uppercase text-primary-foreground"
@@ -151,6 +164,7 @@ export function SiteHeader() {
         )}
       </div>
       <div className="hazard-stripe h-1" />
+      <QuoteDialog open={quoteOpen} onOpenChange={setQuoteOpen} />
     </header>
   );
 }
