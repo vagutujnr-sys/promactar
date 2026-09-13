@@ -1,1 +1,0 @@
-var e=`/assets/industrial-B_fmcM2G.jpg`;export{e as t};
