@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import googleAnalyticsLogo from "@/assets/google-analytics.svg";
+import googleSearchConsoleLogo from "@/assets/google-search-console.svg";
 import logo from "@/assets/promactar-logo.png";
 
 export function SiteFooter() {
@@ -15,8 +17,8 @@ export function SiteFooter() {
             loading="lazy"
           />
           <p className="mt-4 max-w-xs text-sm text-asphalt-foreground/70">
-            Construction and surface-development since 2013. Road construction, brick paving,
-            tennis courts, domestic and industrial driveways.
+            Construction and surface-development since 2013. Road construction, brick paving, tennis
+            courts, domestic and industrial driveways.
           </p>
           <p className="mt-4 text-xs uppercase tracking-widest text-asphalt-foreground/50">
             CK Reg No. 2013/035446/07
@@ -80,10 +82,31 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-asphalt-foreground/50">
-        <div>© {new Date().getFullYear()} Pro Mactar Civil Construction (Pty) Ltd. All rights reserved.</div>
+        <div>
+          © {new Date().getFullYear()} Pro Mactar Civil Construction (Pty) Ltd. All rights reserved.
+        </div>
         <div className="mt-2 uppercase tracking-[0.2em] text-asphalt-foreground/40">
           Developed by CodemathPHP
         </div>
+        <p className="mt-3 flex flex-wrap items-center justify-center gap-x-1 gap-y-2 text-asphalt-foreground/60">
+          <span>Powered by</span>
+          <a
+            href="https://analytics.google.com/"
+            className="inline-flex items-center gap-1 hover:text-asphalt-foreground"
+          >
+            <img src={googleAnalyticsLogo} alt="" className="h-4 w-4" />
+            Google Analytics
+          </a>
+          <span>and monitored through</span>
+          <a
+            href="https://search.google.com/search-console/"
+            className="inline-flex items-center gap-1 hover:text-asphalt-foreground"
+          >
+            <img src={googleSearchConsoleLogo} alt="" className="h-4 w-4" />
+            Google Search Console
+          </a>
+          <span>.</span>
+        </p>
       </div>
     </footer>
   );
