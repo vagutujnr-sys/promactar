@@ -90,22 +90,20 @@ export function SiteFooter() {
         </div>
         <p className="mt-3 flex flex-wrap items-center justify-center gap-x-1 gap-y-2 text-asphalt-foreground/60">
           <span>Powered by</span>
-          <a
-            href="https://analytics.google.com/"
-            className="inline-flex items-center gap-1 hover:text-asphalt-foreground"
-          >
+          <span className="inline-flex items-center gap-1">
             <img src={googleAnalyticsLogo} alt="" className="h-4 w-4" />
             Google Analytics
-          </a>
+          </span>
           <span>and monitored through</span>
-          <a
-            href="https://search.google.com/search-console/"
-            className="inline-flex items-center gap-1 hover:text-asphalt-foreground"
-          >
+          <span className="inline-flex items-center gap-1">
             <img src={googleSearchConsoleLogo} alt="" className="h-4 w-4" />
             Google Search Console
-          </a>
+          </span>
           <span>.</span>
+        </p>
+        <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-asphalt-foreground/40">
+          Disclaimer: Site information is provided for general guidance only. Final scope, pricing,
+          timelines and conditions are subject to assessment and written agreement.
         </p>
       </div>
     </footer>
